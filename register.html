@@ -1,0 +1,210 @@
+	
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Registration for HC2 2013</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="PFBC/Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                <LINK REL="SHORTCUT ICON" HREF="res/favicon.png">
+		<style type="text/css">
+			body {
+				padding-top: 20px;
+				padding-bottom: 40px;
+			}
+			.sidebar-nav {
+				padding: 9px 0;
+			}
+                        div.dd { 
+                           /*position: relative; /* IE is dumb */
+                            display: block;                 
+                            float: left;     
+                            width: 450px; 
+                            height: 16px; 
+                            margin: 0 0 2px; 
+                            background: #F5F5F5; 
+                        }
+
+                        div.dd div.fill { 
+                            /*position: relative; */
+                            background: #006DCC; 
+                            height: 16px; 
+                            width: 75%; 
+                            text-align:right; 
+                            display:block;
+                            float: left;
+                        }
+                        div.fillconfirm { 
+                            /*position: relative; */
+                            background: #003200; 
+                            height: 16px; 
+                            width: 75%; 
+                            text-align:right; 
+                            display:block;
+                            float: left;
+                        }
+                        div.fillwaitinglist { 
+                            /*position: relative; */
+                            background: #4B0082; 
+                            height: 16px; 
+                            width: 75%; 
+                            text-align:right; 
+                            display:block;
+                            float: left;
+                        }
+		</style>
+		<link href="PFBC/Resources/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="PFBC/Resources/bootstrap/js/bootstrap.js"></script>
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span9">
+<noscript>
+<p><strong>Please enable Javascript.</strong></p>
+</noscript>
+
+<table>
+<tr>
+<td><?= enfrde('Number of contestants:', 'Nombre de participants:', 'Anzahl Teilnehmer:'); ?>&nbsp;</td>
+<td>
+<div class="dd">
+  <div class="fill" style="width:100%">
+  <div class="fillconfirm" title="Contestants who solved the qualification task: 130." style="width:100%"></div></div>
+</div>
+</td>
+<td>&nbsp;124/124</td>
+</tr>
+<tr>
+<td><?= enfrde('Waiting list:', 'Liste d\'attente:', 'Warteliste:'); ?>&nbsp;</td>
+<td>
+<div class="dd">
+  <div class="fillwaitinglist" style="width:100%">
+</div>
+</td>
+<td>&nbsp;12/12</td>
+</tr>
+</table>
+<p>Registration is closed.</p><style type="text/css">label span.required { color: #B94A48; }span.help-inline, span.help-block { color: #888; font-size: .9em; font-style: italic; }</style><form action="../external.html?link=http://2013.hc2.ch/register.php" id="register" method="post" class="form-horizontal"><fieldset><input type="hidden" name="form" value="register" id="register-element-0"/><legend>Registration for HC2 2013</legend><div class="control-group"><label class="control-label" for="register-element-2"><span class="required">* </span>Team name:</label><div class="controls"><input type="text" name="teamname" required id="register-element-2"/></div></div><div class="control-group"><label class="control-label" for="register-element-3"><span class="required">* </span>Number of contestants:</label><div class="controls"><label class="radio"><input id="register-element-3-0" type="radio" name="numcont" onclick="toggleContestants(this.value);" onchange="toggleContestants(this.value);" required value="1"/>1</label><label class="radio"><input id="register-element-3-1" type="radio" name="numcont" onclick="toggleContestants(this.value);" onchange="toggleContestants(this.value);" required value="2"/>2</label><label class="radio"><input id="register-element-3-2" type="radio" name="numcont" onclick="toggleContestants(this.value);" onchange="toggleContestants(this.value);" required value="3"/>3</label><span class="help-block">Registration fees are 5.00 CHF per contestant.</span></div></div><div id="LookForMore"><p>The origanizers will try to form balanced 3-person teams (to the best of their abilities) out of all individuals and 2-person-teams.</p><input type="hidden" name="morecont" value="1" id="register-element-6"/></div><div class="control-group"><label class="control-label" for="register-element-8"><span class="required">* </span>Please read the <a href="regu.html" target="_top">contest rules</a> before registering.</label><div class="controls"><label class="checkbox"><input id="register-element-8-0" type="checkbox" name="rules" required value="1"/>I have read the rules and agree that my team and I will abide by them.</label></div></div><div class="control-group"><label class="control-label" for="register-element-9"><span class="required">* </span>There will be a short <a href='task.html' target='_top'>task</a> to be solved after you register.</label><div class="controls"><label class="checkbox"><input id="register-element-9-0" type="checkbox" name="task" required value="1"/>I agree.</label><span class="help-block">The submission deadline is 8 hours after the corresponding registration deadline.</span></div></div><div id="Contestant1"><legend>Contestant 1</legend><div class="control-group"><label class="control-label" for="register-element-12">First name:</label><div class="controls"><input type="text" name="fname1" id="register-element-12"/></div></div><div class="control-group"><label class="control-label" for="register-element-13">Last name:</label><div class="controls"><input type="text" name="lname1" id="register-element-13"/></div></div><div class="control-group"><label class="control-label" for="register-element-14">E-mail Address:</label><div class="controls"><input type="email" name="email1" id="register-element-14"/><span class="help-block">We will use your e-mail address exclusively for communication relating to this and next year's contest. We will not transmit your e-mail address to our sponsors without your explicit consent.</span></div></div><div class="control-group"><label class="control-label" for="register-element-15">Affiliation:</label><div class="controls"><select name="aff1" onclick="toggleAff1(this.value);" onchange="toggleAff1(this.value);" id="register-element-15"><option value="40">EPFL - &Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne</option><option value="41">* PolyProg - Member of the PolyProg student association at EPFL</option><option value="42">ETH - Eidgen&ouml;ssische Technische Hochschule Z&uuml;rich</option><option value="43">* VIS - Member of VIS at ETH Zurich</option><option value="44">* SOI - Participant of the Swiss Olympiad in Informatics</option><option value="45">University of Basel</option><option value="46">University of Bern</option><option value="47">University of Fribourg</option><option value="48">University of Geneva</option><option value="49">University of Lausanne</option><option value="50">University of Lucerne</option><option value="51">University of Neuch&acirc;tel</option><option value="52">University of St. Gallen</option><option value="53">Universit&agrave; della Svizzera italiana</option><option value="54">University of Zurich</option><option value="55">BFH - Bern University of Applied Sciences</option><option value="56">FHNW - University of Applied Sciences and Arts Northwestern Switzerland</option><option value="57">FHO - Fachhochschule Ostschweiz</option><option value="58">HES-SO - University of Applied Sciences and Arts Western Switzerland</option><option value="59">HSLU - Lucerne University of Applied Sciences and Arts</option><option value="60">SUSPI - University of Applied Sciences and Arts of Southern Switzerland</option><option value="61">ZFH - Z&uuml;rcher Fachhochschule</option><option value="62">Kalaidos University of Applied Sciences Switzerland</option><option value="63">Les Roches-Gruy&egrave;re University of Applied Sciences</option><option value="64">* INSA - Institut National des Sciences Appliqu&eacute;es de Lyon</option><option value="65">BSFH - Berufsschule f&uuml;r H&ouml;rgesch&auml;digte</option><option value="66">CFPT - Centre de formation professionnelle Technique</option><option value="67">* OpenSystems</option><option value="68">* AdNovum</option><option value="69">* ELCA</option><option value="70">* Google</option><option value="71">* Search.ch</option><option value="72">* Aptarism</option><option value="9999">Other...</option></select></div></div><div id="AffOther1"><div class="control-group"><label class="control-label" for="register-element-17">Affiliation (if other):</label><div class="controls"><input type="text" name="aff_other1" id="register-element-17"/></div></div></div><div id="Train1"><div class="control-group"><label class="control-label" for="register-element-20">Do you have a travelcard from the Swiss Federal Railways?</label><div class="controls"><label class="radio"><input id="register-element-20-0" type="radio" name="ga1" value="none"/>No</label><label class="radio"><input id="register-element-20-1" type="radio" name="ga1" value="halbtax"/>I have a Half-Fare card</label><label class="radio"><input id="register-element-20-2" type="radio" name="ga1" value="voie7"/>I have a Track 7 card</label><label class="radio"><input id="register-element-20-3" type="radio" name="ga1" value="ga"/>I have a GA travelcard</label><span class="help-block">Members of VIS, and contestants of SOI (Swiss Olympiad in Informatics) can get their ticket reimbursed up to the Halbtax rate (VIS: up to 71.00 CHF). <strong>Please consider buying a 1-day travelpass from your commune instead (~44 CHF).</strong></span></div></div></div><div class="control-group"><label class="control-label" for="register-element-22">I am currently:</label><div class="controls"><select name="status1" id="register-element-22"><option value="80">A high school student</option><option value="81">An apprentice</option><option value="82">CMS / Preparing for bachelor</option><option value="83">A bachelor student</option><option value="84">A master student</option><option value="85">A PhD student</option><option value="86">An employee</option><option value="87">Other (pending approval by organizers)</option></select><span class="help-block">If you graduated during the Fall semester 2012, and are not currently working in a IT-related company, you may still register as a student.</span></div></div><div class="control-group"><label class="control-label" for="register-element-23">Language for problem statements:</label><div class="controls"><label class="radio"><input id="register-element-23-0" type="radio" name="plang1" value="E"/>English</label><label class="radio"><input id="register-element-23-1" type="radio" name="plang1" value="F"/>French</label><label class="radio"><input id="register-element-23-2" type="radio" name="plang1" value="D"/>German</label></div></div><div class="control-group"><label class="control-label" for="register-element-24">Preferred T-shirt size:</label><div class="controls"><label class="radio"><input id="register-element-24-0" type="radio" name="tshirt1" value="S"/>Small</label><label class="radio"><input id="register-element-24-1" type="radio" name="tshirt1" value="M"/>Medium</label><label class="radio"><input id="register-element-24-2" type="radio" name="tshirt1" value="L"/>Large</label><label class="radio"><input id="register-element-24-3" type="radio" name="tshirt1" value="XL"/>X-Large</label><label class="radio"><input id="register-element-24-4" type="radio" name="tshirt1" value="2XL"/>2X-Large</label></div></div><div class="control-group"><label class="control-label" for="register-element-25">Join after-contest dinner:</label><div class="controls"><label class="radio"><input id="register-element-25-0" type="radio" name="dinner1" value="no"/>No</label><label class="radio"><input id="register-element-25-1" type="radio" name="dinner1" value="yes"/>Yes [+ 21.00 CHF]</label><span class="help-block">The after-contest dinner will take place in the <a href='../external.html?link=http://www.restaurant-bellavita.com/' target='_blank'>Bella Vita Pizzeria</a> near the Lausanne train station. </span></div></div><div class="control-group"><label class="control-label" for="register-element-26">Special needs:</label><div class="controls"><textarea rows="5" name="needs1" id="register-element-26"></textarea></div></div></div><div id="Contestant2"><legend>Contestant 2</legend><div class="control-group"><label class="control-label" for="register-element-30">First name:</label><div class="controls"><input type="text" name="fname2" id="register-element-30"/></div></div><div class="control-group"><label class="control-label" for="register-element-31">Last name:</label><div class="controls"><input type="text" name="lname2" id="register-element-31"/></div></div><div class="control-group"><label class="control-label" for="register-element-32">E-mail Address:</label><div class="controls"><input type="email" name="email2" id="register-element-32"/><span class="help-block">We will use your e-mail address exclusively for communication relating to this and next year's contest. We will not transmit your e-mail address to our sponsors without your explicit consent.</span></div></div><div class="control-group"><label class="control-label" for="register-element-33">Affiliation:</label><div class="controls"><select name="aff2" onclick="toggleAff2(this.value);" onchange="toggleAff2(this.value);" id="register-element-33"><option value="40">EPFL - &Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne</option><option value="41">* PolyProg - Member of the PolyProg student association at EPFL</option><option value="42">ETH - Eidgen&ouml;ssische Technische Hochschule Z&uuml;rich</option><option value="43">* VIS - Member of VIS at ETH Zurich</option><option value="44">* SOI - Participant of the Swiss Olympiad in Informatics</option><option value="45">University of Basel</option><option value="46">University of Bern</option><option value="47">University of Fribourg</option><option value="48">University of Geneva</option><option value="49">University of Lausanne</option><option value="50">University of Lucerne</option><option value="51">University of Neuch&acirc;tel</option><option value="52">University of St. Gallen</option><option value="53">Universit&agrave; della Svizzera italiana</option><option value="54">University of Zurich</option><option value="55">BFH - Bern University of Applied Sciences</option><option value="56">FHNW - University of Applied Sciences and Arts Northwestern Switzerland</option><option value="57">FHO - Fachhochschule Ostschweiz</option><option value="58">HES-SO - University of Applied Sciences and Arts Western Switzerland</option><option value="59">HSLU - Lucerne University of Applied Sciences and Arts</option><option value="60">SUSPI - University of Applied Sciences and Arts of Southern Switzerland</option><option value="61">ZFH - Z&uuml;rcher Fachhochschule</option><option value="62">Kalaidos University of Applied Sciences Switzerland</option><option value="63">Les Roches-Gruy&egrave;re University of Applied Sciences</option><option value="64">* INSA - Institut National des Sciences Appliqu&eacute;es de Lyon</option><option value="65">BSFH - Berufsschule f&uuml;r H&ouml;rgesch&auml;digte</option><option value="66">CFPT - Centre de formation professionnelle Technique</option><option value="67">* OpenSystems</option><option value="68">* AdNovum</option><option value="69">* ELCA</option><option value="70">* Google</option><option value="71">* Search.ch</option><option value="72">* Aptarism</option><option value="9999">Other...</option></select></div></div><div id="AffOther2"><div class="control-group"><label class="control-label" for="register-element-35">Affiliation (if other):</label><div class="controls"><input type="text" name="aff_other2" id="register-element-35"/></div></div></div><div id="Train2"><div class="control-group"><label class="control-label" for="register-element-38">Do you have a travelcard from the Swiss Federal Railways?</label><div class="controls"><label class="radio"><input id="register-element-38-0" type="radio" name="ga2" value="none"/>No</label><label class="radio"><input id="register-element-38-1" type="radio" name="ga2" value="halbtax"/>I have a Half-Fare card</label><label class="radio"><input id="register-element-38-2" type="radio" name="ga2" value="voie7"/>I have a Track 7 card</label><label class="radio"><input id="register-element-38-3" type="radio" name="ga2" value="ga"/>I have a GA travelcard</label><span class="help-block">Members of VIS, and contestants of SOI (Swiss Olympiad in Informatics) can get their ticket reimbursed up to the Halbtax rate (VIS: up to 71.00 CHF). <strong>Please consider buying a 1-day travelpass from your commune instead (~44 CHF).</strong></span></div></div></div><div class="control-group"><label class="control-label" for="register-element-40">I am currently:</label><div class="controls"><select name="status2" id="register-element-40"><option value="80">A high school student</option><option value="81">An apprentice</option><option value="82">CMS / Preparing for bachelor</option><option value="83">A bachelor student</option><option value="84">A master student</option><option value="85">A PhD student</option><option value="86">An employee</option><option value="87">Other (pending approval by organizers)</option></select><span class="help-block">If you graduated during the Fall semester 2012, and are not currently working in a IT-related company, you may still register as a student.</span></div></div><div class="control-group"><label class="control-label" for="register-element-41">Language for problem statements:</label><div class="controls"><label class="radio"><input id="register-element-41-0" type="radio" name="plang2" value="E"/>English</label><label class="radio"><input id="register-element-41-1" type="radio" name="plang2" value="F"/>French</label><label class="radio"><input id="register-element-41-2" type="radio" name="plang2" value="D"/>German</label></div></div><div class="control-group"><label class="control-label" for="register-element-42">Preferred T-shirt size:</label><div class="controls"><label class="radio"><input id="register-element-42-0" type="radio" name="tshirt2" value="S"/>Small</label><label class="radio"><input id="register-element-42-1" type="radio" name="tshirt2" value="M"/>Medium</label><label class="radio"><input id="register-element-42-2" type="radio" name="tshirt2" value="L"/>Large</label><label class="radio"><input id="register-element-42-3" type="radio" name="tshirt2" value="XL"/>X-Large</label><label class="radio"><input id="register-element-42-4" type="radio" name="tshirt2" value="2XL"/>2X-Large</label></div></div><div class="control-group"><label class="control-label" for="register-element-43">Join after-contest dinner:</label><div class="controls"><label class="radio"><input id="register-element-43-0" type="radio" name="dinner2" value="no"/>No</label><label class="radio"><input id="register-element-43-1" type="radio" name="dinner2" value="yes"/>Yes [+ 21.00 CHF]</label><span class="help-block">The after-contest dinner will take place in the <a href='../external.html?link=http://www.restaurant-bellavita.com/' target='_blank'>Bella Vita Pizzeria</a> near the Lausanne train station. </span></div></div><div class="control-group"><label class="control-label" for="register-element-44">Special needs:</label><div class="controls"><textarea rows="5" name="needs2" id="register-element-44"></textarea></div></div></div><div id="Contestant3"><legend>Contestant 3</legend><div class="control-group"><label class="control-label" for="register-element-48">First name:</label><div class="controls"><input type="text" name="fname3" id="register-element-48"/></div></div><div class="control-group"><label class="control-label" for="register-element-49">Last name:</label><div class="controls"><input type="text" name="lname3" id="register-element-49"/></div></div><div class="control-group"><label class="control-label" for="register-element-50">E-mail Address:</label><div class="controls"><input type="email" name="email3" id="register-element-50"/><span class="help-block">We will use your e-mail address exclusively for communication relating to this and next year's contest. We will not transmit your e-mail address to our sponsors without your explicit consent.</span></div></div><div class="control-group"><label class="control-label" for="register-element-51">Affiliation:</label><div class="controls"><select name="aff3" onclick="toggleAff3(this.value);" onchange="toggleAff3(this.value);" id="register-element-51"><option value="40">EPFL - &Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne</option><option value="41">* PolyProg - Member of the PolyProg student association at EPFL</option><option value="42">ETH - Eidgen&ouml;ssische Technische Hochschule Z&uuml;rich</option><option value="43">* VIS - Member of VIS at ETH Zurich</option><option value="44">* SOI - Participant of the Swiss Olympiad in Informatics</option><option value="45">University of Basel</option><option value="46">University of Bern</option><option value="47">University of Fribourg</option><option value="48">University of Geneva</option><option value="49">University of Lausanne</option><option value="50">University of Lucerne</option><option value="51">University of Neuch&acirc;tel</option><option value="52">University of St. Gallen</option><option value="53">Universit&agrave; della Svizzera italiana</option><option value="54">University of Zurich</option><option value="55">BFH - Bern University of Applied Sciences</option><option value="56">FHNW - University of Applied Sciences and Arts Northwestern Switzerland</option><option value="57">FHO - Fachhochschule Ostschweiz</option><option value="58">HES-SO - University of Applied Sciences and Arts Western Switzerland</option><option value="59">HSLU - Lucerne University of Applied Sciences and Arts</option><option value="60">SUSPI - University of Applied Sciences and Arts of Southern Switzerland</option><option value="61">ZFH - Z&uuml;rcher Fachhochschule</option><option value="62">Kalaidos University of Applied Sciences Switzerland</option><option value="63">Les Roches-Gruy&egrave;re University of Applied Sciences</option><option value="64">* INSA - Institut National des Sciences Appliqu&eacute;es de Lyon</option><option value="65">BSFH - Berufsschule f&uuml;r H&ouml;rgesch&auml;digte</option><option value="66">CFPT - Centre de formation professionnelle Technique</option><option value="67">* OpenSystems</option><option value="68">* AdNovum</option><option value="69">* ELCA</option><option value="70">* Google</option><option value="71">* Search.ch</option><option value="72">* Aptarism</option><option value="9999">Other...</option></select></div></div><div id="AffOther3"><div class="control-group"><label class="control-label" for="register-element-53">Affiliation (if other):</label><div class="controls"><input type="text" name="aff_other3" id="register-element-53"/></div></div></div><div id="Train3"><div class="control-group"><label class="control-label" for="register-element-56">Do you have a travelcard from the Swiss Federal Railways?</label><div class="controls"><label class="radio"><input id="register-element-56-0" type="radio" name="ga3" value="none"/>No</label><label class="radio"><input id="register-element-56-1" type="radio" name="ga3" value="halbtax"/>I have a Half-Fare card</label><label class="radio"><input id="register-element-56-2" type="radio" name="ga3" value="voie7"/>I have a Track 7 card</label><label class="radio"><input id="register-element-56-3" type="radio" name="ga3" value="ga"/>I have a GA travelcard</label><span class="help-block">Members of VIS, and contestants of SOI (Swiss Olympiad in Informatics) can get their ticket reimbursed up to the Halbtax rate (VIS: up to 71.00 CHF). <strong>Please consider buying a 1-day travelpass from your commune instead (~44 CHF).</strong></span></div></div></div><div class="control-group"><label class="control-label" for="register-element-58">I am currently:</label><div class="controls"><select name="status3" id="register-element-58"><option value="80">A high school student</option><option value="81">An apprentice</option><option value="82">CMS / Preparing for bachelor</option><option value="83">A bachelor student</option><option value="84">A master student</option><option value="85">A PhD student</option><option value="86">An employee</option><option value="87">Other (pending approval by organizers)</option></select><span class="help-block">If you graduated during the Fall semester 2012, and are not currently working in a IT-related company, you may still register as a student.</span></div></div><div class="control-group"><label class="control-label" for="register-element-59">Language for problem statements:</label><div class="controls"><label class="radio"><input id="register-element-59-0" type="radio" name="plang3" value="E"/>English</label><label class="radio"><input id="register-element-59-1" type="radio" name="plang3" value="F"/>French</label><label class="radio"><input id="register-element-59-2" type="radio" name="plang3" value="D"/>German</label></div></div><div class="control-group"><label class="control-label" for="register-element-60">Preferred T-shirt size:</label><div class="controls"><label class="radio"><input id="register-element-60-0" type="radio" name="tshirt3" value="S"/>Small</label><label class="radio"><input id="register-element-60-1" type="radio" name="tshirt3" value="M"/>Medium</label><label class="radio"><input id="register-element-60-2" type="radio" name="tshirt3" value="L"/>Large</label><label class="radio"><input id="register-element-60-3" type="radio" name="tshirt3" value="XL"/>X-Large</label><label class="radio"><input id="register-element-60-4" type="radio" name="tshirt3" value="2XL"/>2X-Large</label></div></div><div class="control-group"><label class="control-label" for="register-element-61">Join after-contest dinner:</label><div class="controls"><label class="radio"><input id="register-element-61-0" type="radio" name="dinner3" value="no"/>No</label><label class="radio"><input id="register-element-61-1" type="radio" name="dinner3" value="yes"/>Yes [+ 21.00 CHF]</label><span class="help-block">The after-contest dinner will take place in the <a href='../external.html?link=http://www.restaurant-bellavita.com/' target='_blank'>Bella Vita Pizzeria</a> near the Lausanne train station. </span></div></div><div class="control-group"><label class="control-label" for="register-element-62">Special needs:</label><div class="controls"><textarea rows="5" name="needs3" id="register-element-62"></textarea></div></div></div><p>If you have any questions, please send an e-mail to the organizers: <a href="mailto:info@hc2.ch" target="_blank">info@hc2.ch</a>.</p><div class="form-actions"><input type="submit" value="Register" name class="btn btn-primary" id="register-element-65"/></div></fieldset></form><script type="text/javascript">jQuery(document).ready(function() {		jQuery("#register").bind("submit", function() { 
+			jQuery(this).find("input[type=submit]").attr("disabled", "disabled"); 
+		});jQuery("#register :input:visible:enabled:first").focus();}); </script><script type="text/javascript">
+
+    if(jQuery('input[name=numcont][value=2]').is(':checked')) {
+      jQuery("#LookForMore").show(0);
+      jQuery("#Contestant2").show(0);
+      jQuery("#Contestant3").hide(0);
+    }
+    else if(jQuery('input[name=numcont][value=3]').is(':checked')) {
+      jQuery("#LookForMore").hide(0);
+      jQuery("#Contestant2").show(0);
+      jQuery("#Contestant3").show(0);
+    } else {
+      jQuery("#LookForMore").show(0);
+      jQuery("#Contestant2").hide(0);
+      jQuery("#Contestant3").hide(0);
+    }
+
+    function toggleContestants(val) {
+        if (val == "2") {
+            jQuery("#LookForMore").show(200);
+            jQuery("#Contestant2").show(200);
+            jQuery("#Contestant3").hide(200);
+        } else if (val == "3"){
+            jQuery("#LookForMore").hide(200);
+            jQuery("#Contestant2").show(200);
+            jQuery("#Contestant3").show(200);
+        } else {
+            jQuery("#LookForMore").show(200);
+            jQuery("#Contestant2").hide(200);
+            jQuery("#Contestant3").hide(200);
+        }
+    }
+
+    if(jQuery('select[name="aff1"]').val() != 9999) {
+      jQuery("#AffOther1").hide(0);
+    }
+    if(jQuery('select[name="aff1"]').val() != 43 &&
+       jQuery('select[name="aff1"]').val() != 44) {
+      jQuery("#Train1").hide(0);
+    }
+
+    function toggleAff1(val) {
+        if(val == "9999") {
+            jQuery("#AffOther1").show(200);
+            jQuery("#Train1").hide(200);
+        } else if(val == "43") {
+            jQuery("#AffOther1").hide(200);
+            jQuery("#Train1").show(200);
+        } else if(val == "44") {
+            jQuery("#AffOther1").hide(200);
+            jQuery("#Train1").show(200);
+        } else {
+            jQuery("#AffOther1").hide(200);
+            jQuery("#Train1").hide(200);
+        }
+    }
+
+    if(jQuery('select[name="aff2"]').val() != 9999) {
+      jQuery("#AffOther2").hide(0);
+    }
+    if(jQuery('select[name="aff2"]').val() != 43 &&
+       jQuery('select[name="aff2"]').val() != 44) {
+      jQuery("#Train2").hide(0);
+    }
+
+    function toggleAff2(val) {
+        if(val == "9999") {
+            jQuery("#AffOther2").show(200);
+            jQuery("#Train2").hide(200);
+        } else if(val == "43") {
+            jQuery("#AffOther2").hide(200);
+            jQuery("#Train2").show(200);
+        } else if(val == "44") {
+            jQuery("#AffOther2").hide(200);
+            jQuery("#Train2").show(200);
+        } else {
+            jQuery("#AffOther2").hide(200);
+            jQuery("#Train2").hide(200);
+        }
+    }
+
+    if(jQuery('select[name="aff3"]').val() != 9999) {
+      jQuery("#AffOther3").hide(0);
+    }
+    if(jQuery('select[name="aff3"]').val() != 43 &&
+       jQuery('select[name="aff3"]').val() != 44) {
+      jQuery("#Train3").hide(0);
+    }
+
+    function toggleAff3(val) {
+        if(val == "9999") {
+            jQuery("#AffOther3").show(200);
+            jQuery("#Train3").hide(200);
+        } else if(val == "43") {
+            jQuery("#AffOther3").hide(200);
+            jQuery("#Train3").show(200);
+        } else if(val == "44") {
+            jQuery("#AffOther3").hide(200);
+            jQuery("#Train3").show(200);
+        } else {
+            jQuery("#AffOther3").hide(200);
+            jQuery("#Train3").hide(200);
+        }
+    }
+</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
